@@ -1,6 +1,6 @@
 <template>
   <div class="editor">
-    <Header :title="msg"></Header>
+    <HeaderBlock :titleMsg="msg"></HeaderBlock>
     <span>{{ user.displayName }}</span>
     <button @click="logout">ログアウト</button>
     <div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Header from "./Header"
+import HeaderBlock from "./HeaderBlock"
 
 import marked from "marked";
 export default {
@@ -97,7 +97,7 @@ export default {
     document.onkeydown = null;
   },
   components: {
-    Header: Header
+    HeaderBlock: HeaderBlock
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
 <div class="home">
-  <Header :title="msg"></Header>
+  <HeaderBlock :titleMsg="msg"></HeaderBlock>
   <div class="container">
     <section class="section">
       <header>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Header from "./Header"
+import HeaderBlock from "./HeaderBlock"
 
 export default {
   name: 'home',
@@ -29,7 +29,7 @@ export default {
     }
   },
   components: {
-    Header: Header
+    HeaderBlock: HeaderBlock
   }
 }
 </script>

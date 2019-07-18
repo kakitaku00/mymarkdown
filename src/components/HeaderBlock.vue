@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1><router-link :to="{ name: 'top' }">{{ title }}</router-link></h1>
+    <h1><router-link :to="{ name: 'top' }">{{ titleMsg }}</router-link></h1>
     <nav class="nav">
       <ul class="navList">
         <li class="navListItem">ABOUT</li>
@@ -11,13 +11,13 @@
 
 <script>
 export default {
-  name: "header",
-  props: ["title"],
+  name: "headerBrock",
+  props: ["titleMsg"],
   data() {
     return {
-      title: title
+      titleMsg: titleMsg
     }
-  }
+  },
 }
 </script>
 
