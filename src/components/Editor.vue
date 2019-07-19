@@ -2,7 +2,7 @@
   <div class="editor">
     <Header-Block :ttl="msg">
       <li class="userStatus">
-        <span>{{ user.displayName }}</span>
+        <span>Login User：{{ user.displayName }}</span>
         <button class="logoutBtn" @click="logout">ログアウト</button>
       </li>
     </Header-Block>
@@ -106,6 +106,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .editor {
+    margin-bottom: 40px;
+  }
   .memoListWrapper {
     width: 19%;
     float: left;

@@ -3,7 +3,7 @@
   <div class="loading" v-if="!loading">Loading...</div>
   <Home v-if="!isLogin && loading"></Home>
   <Editor v-if="isLogin && loading" :user="userData"></Editor>
-  <div v-if="isLogin && loading">
+  <div v-if="loading">
     <router-link :to="{ name: 'terms' }">利用規約</router-link>
   </div>
 </div>
