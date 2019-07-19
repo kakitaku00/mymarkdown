@@ -372,6 +372,11 @@
   padding-left: 0;
 }
 
+.markdown-body ol li,
+.markdown-body ul li {
+  display: list-item;
+}
+
 .markdown-body ol ol,
 .markdown-body ul ol {
   list-style-type: lower-roman;

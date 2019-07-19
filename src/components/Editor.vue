@@ -118,10 +118,6 @@ export default {
     text-align-last: left;
     border-bottom: 1px solid #000;
 
-    &:nth-child(even) {
-      background-color: #ccc;
-    }
-
     &[data-selected="true"] {
       background-color: #ccf;
     }
@@ -144,14 +140,16 @@ export default {
 
   .markdown {
     float: left;
-    width: 40%;
+    width: 50%;
     height: 500px;
   }
 
   .preview {
     float: left;
-    width: 40%;
+    width: 50%;
     text-align-last: left;
+    padding: 20px;
+    border: 1px solid #ccc;
   }
 
   .btn {
