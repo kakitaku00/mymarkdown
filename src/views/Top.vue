@@ -1,8 +1,11 @@
 <template>
 <div id="top">
-  <Home v-if="!isLogin"></Home>
-  <Editor v-if="isLogin" :user="userData"></Editor>
-  <router-link :to="{ name: 'terms' }">利用規約</router-link>
+  <div class="loading" v-if="!loading">Loading...</div>
+  <Home v-if="!isLogin && loading"></Home>
+  <Editor v-if="isLogin && loading" :user="userData"></Editor>
+  <div v-if="isLogin && loading">
+    <router-link :to="{ name: 'terms' }">利用規約</router-link>
+  </div>
 </div>
 </template>
 
@@ -13,11 +16,12 @@ export default {
   name: "top",
   data() {
     return {
+      loading: false,
       isLogin: false,
       userData: null
     };
   },
-  created: function() {
+  beforeCreate: function() {
     firebase.auth().onAuthStateChanged(user => {
       console.log(user);
       if (user) {
@@ -27,6 +31,10 @@ export default {
         this.isLogin = false;
         this.userData = null;
       }
+      // 最低1秒loading表示
+      setTimeout(() => {
+        this.loading = true;
+      }, 1000);
     })
   },
   components: {
@@ -58,5 +66,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.loading {
+  margin-top: 100px;
 }
 </style>
