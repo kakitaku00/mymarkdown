@@ -1,6 +1,6 @@
 <template>
 <div class="home">
-  <HeaderBlock :titleMsg="msg"></HeaderBlock>
+  <Header-Block :ttl="msg"></Header-Block>
   <div class="container">
     <section class="section">
       <header>

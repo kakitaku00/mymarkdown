@@ -1,6 +1,6 @@
 <template>
   <div class="editor">
-    <HeaderBlock :titleMsg="msg"></HeaderBlock>
+    <Header-Block :ttl="msg"></Header-Block>
     <span>{{ user.displayName }}</span>
     <button @click="logout">ログアウト</button>
     <div>
